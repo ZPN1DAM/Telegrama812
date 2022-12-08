@@ -29,7 +29,7 @@ namespace Telegrama_812
             textoTelegrama = txtTelegrama.Text;
 
             // telegrama urgente?
-            if (rdUrgente.Checked)
+            if (cbUrgente.Checked)
                 tipoTelegrama = 'u';
 
             //Obtengo el número de palabras que forma el telegrama
