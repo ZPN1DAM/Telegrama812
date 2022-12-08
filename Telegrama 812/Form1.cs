@@ -20,7 +20,7 @@ namespace Telegrama_812
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = 'o';
+            char tipoTelegrama = ' ';
             int numPalabras = 0;
             double coste;
             int i = 0;
