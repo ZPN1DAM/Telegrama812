@@ -20,7 +20,7 @@ namespace Telegrama_812
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o';
             int numPalabras = 0;
             double coste;
             int i = 0;
@@ -29,7 +29,7 @@ namespace Telegrama_812
             textoTelegrama = txtTelegrama.Text;
 
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            if (rdUrgente.Checked)
                 tipoTelegrama = 'u';
 
             //Obtengo el número de palabras que forma el telegrama
