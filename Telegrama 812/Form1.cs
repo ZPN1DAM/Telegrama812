@@ -20,23 +20,39 @@ namespace Telegrama_812
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o';
             int numPalabras = 0;
             double coste;
+            int i = 0;
+
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
+
             // telegrama urgente?
             if (cbUrgente.Checked)
                 tipoTelegrama = 'u';
-            //Obtengo el número de palabras que forma el telegrama 
-            numPalabras = textoTelegrama.Length;
+
+            //Obtengo el número de palabras que forma el telegrama
+            char[] texto = textoTelegrama.ToCharArray();
+
             //Si el telegrama es ordinario
+            for (i = 0; i < textoTelegrama.Length; i++)
+            {
+                if (textoTelegrama[i].ToString() == " ")
+                    numPalabras++;
+            }
+
+            /*Sumamos una palabra de más al contar solo los espacios entre palabras
+            para que nos cuente la última también.
+            */
+            numPalabras++;
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 2.5;
                 else
-                    coste = 0.5 * numPalabras;
+                    coste = 2.5 + 0.5 * (numPalabras - 10);
             else
+
             //Si el telegrama es urgente
             if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
