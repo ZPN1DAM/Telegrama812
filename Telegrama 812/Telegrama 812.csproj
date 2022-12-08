@@ -7,7 +7,7 @@
     <ProjectGuid>{CEE51C18-81DB-4C54-9CD6-83AFC3399BEA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Telegrama_812</RootNamespace>
-    <AssemblyName>Telegrama_812</AssemblyName>
+    <AssemblyName>Telegrama 812</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,6 +54,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
